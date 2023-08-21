@@ -47,4 +47,14 @@ class User extends Authenticatable
     // {
     //     $this->attributes['password'] = bcrypt($value);
     // }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_user');
+    }
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }
