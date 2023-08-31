@@ -24,6 +24,10 @@ class FrontController extends Controller
         // Getting Posts from Tag
         $tag = Tag::find(1);
         dd($tag->posts);
+
+        try{
+
+        }catch(\Exception)
     }
 
     // Polymophic Many to Many relationship geting tags from multiple model
